@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "airo-xpress",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-11-12",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "vars": {
+    "CLOUDFLARE": "1"
+  },
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "airo-xpress"
+    }
+  ],
+  "images": {
+    "binding": "IMAGES"
+  }
+}
